@@ -1,4 +1,4 @@
-# ajax-snippets README
+# Ajax-Snippets
 
 It can take a lot of time to rewrite this snippets every time you develop something in SharePoint, so I set out to make this quick and easy for any SharePoint Developer!
 
@@ -12,7 +12,7 @@ This extension provide snippets for the following :
 
     1. Update list item
 
-   ![Update](./images/update.png)
+   ![Update](images/update.png)
 
     2. Create list item
 

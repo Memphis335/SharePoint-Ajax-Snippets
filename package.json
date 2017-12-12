@@ -2,7 +2,7 @@
     "name": "ajax-snippets",
     "displayName": "SharePoint Snippets",
     "description": "Simple extension that provide ajax snippets for use in SharePoint with the REST API",
-    "version": "1.8.0",
+    "version": "1.9.0",
     "publisher": "Memphis335",
     "repository": {
         "url": "https://github.com/Memphis335/SharePoint-Ajax-Snippets/"

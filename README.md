@@ -12,26 +12,28 @@ This extension provide snippets for the following :
 
     1. Update list item
 
-    ![Update](images/update.png)
+   ![Update](./images/update.png)
 
     2. Create list item
 
-    ![POST](images/post.png)
+   ![POST](images/post.png)
 
     3. Delete list item
 
-    ![DELETE](images/delete.png)
+   ![DELETE](images/delete.png)
 
     4. Get list item/s
 
-    ![GET](images/get.png)
+   ![GET](images/get.png)
 
 
 > Note: basic knowledge of the REST API is needed.
 
 ## Requirements
 
-    None.
+    Some of the snippets use jQuery to get the Digest Value. Remember to include jQuery on your page or replace the line with 
+
+    document.getElementById('__REQUESTDIGEST').value
 
 ## Release Notes
 

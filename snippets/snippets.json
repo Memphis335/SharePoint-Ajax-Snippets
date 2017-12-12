@@ -1,0 +1,100 @@
+{
+    "GET": {
+        "prefix": "SP",
+        "body": [
+            "$.ajax({",
+            "\t url: ${1:_spPageContextInfo.webAbsoluteUrl} + \"/_api/web/lists/getbytitle('${2:<<ListTitle>>}')/items?\",",
+            "\t method: 'GET',",
+            "\t headers: {",
+            "\t     'Accept': 'application/json;odata=verbose'",
+            "\t},",
+            "\t success: function(data){",
+            "\t    $3",
+            "\t},",
+            "\t error: function(error){",
+            "\t    ${4:console.error(JSON.stringify(error))}",
+            "\t}",
+            "});"
+        ],
+        "description": "Get all items from a SharePoint list."
+    },
+    "POST": {
+        "prefix": "SP",
+        "body": [
+            "$.ajax({",
+            "\t  url: ${1:_spPageContextInfo.webAbsoluteUrl} + \"/_api/web/lists/getbytitle('${2:<<ListTitle>>}')/items('${3:<<Item ID>>}')\",",
+            "\t  method: 'POST',",
+            "\t  headers: {",
+            "\t      'Accept': 'application/json;odata=verbose',",
+            "\t      'X-RequestDigest': ${4:$(\"#__REQUESTDIGEST\").val(),",
+            "\t      'x-requestforceauthentication': true,",
+            "\t}},",
+            "\t  data: JSON.stringify({",
+            "\t      __metadata: {",
+            "\t          type: \"SP.Data.${2:<<ListTitle>>}ListItem\"",
+            "\t},",
+            "\t  //List all columns in the list below. ",
+            "\t  ${5:ColumnName}: ${6:Value},",
+            "\t}),",
+            "\t  success: function(data){",
+            "\t     $7",
+            "\t},",
+            "\t  error: function(error){",
+            "\t     ${8:console.error(JSON.stringify(error))}",
+            "\t}",
+            "})"
+        ],
+        "description": "Add new item to SharePoint list"
+    },
+    "DELETE": {
+        "prefix": "SP",
+        "body": [
+            "$.ajax({",
+            "\t  url: ${1:_spPageContextInfo.webAbsoluteUrl} + \"/_api/web/lists/getbytitle('${2:<<ListTitle>>}')/items('${3:<<Item ID>>}')\",",
+            "\t  method: '',",
+            "\t  headers: {",
+            "\t      'X-RequestDigest': ${4:$(\"#__REQUESTDIGEST\").val(),",
+            "\t      'IF-MATCH': '*',",
+            "\t      'X-HTTP-Method': 'DELETE'",
+            "\t}},",
+            "\t  success: function(data){",
+            "\t     $5",
+            "\t},",
+            "\t  error: function(error){",
+            "\t     ${6:console.error(JSON.stringify(error))}",
+            "\t}",
+            "})"
+        ],
+        "description": "Delete item from SharePoint List"
+    },
+    "UPDATE": {
+        "prefix": "SP",
+        "body": [
+            "$.ajax({",
+            "\t  url: ${1:_spPageContextInfo.webAbsoluteUrl} + \"/_api/web/lists/getbytitle('${2:<<ListTitle>>}')/items('${3:<<Item ID>>}')\",",
+            "\t  method: 'POST',",
+            "\t  headers: {",
+            "\t      'Accept': 'application/json;odata=verbose',",
+            "\t      'X-RequestDigest': ${4:$(\"#__REQUESTDIGEST\").val(),",
+            "\t      'x-requestforceauthentication': true,",
+            "\t      'IF-MATCH': '*',",
+            "\t      'X-HTTP-Method': 'MERGE'",
+            "\t}},",
+            "\t  data: JSON.stringify({",
+            "\t      __metadata: {",
+            "\t          type: \"SP.Data.${2:<<ListTitle>>}ListItem\"",
+            "\t},",
+            "\t  //List all columns in the list below that you want to update. ",
+            "\t  ${5:ColumnToUpdateName}: ${6:Value},",
+            "\t}),",
+            "\t  success: function(data){",
+            "\t     $7",
+            "\t},",
+            "\t  error: function(error){",
+            "\t     ${8:console.error(JSON.stringify(error))}",
+            "\t}",
+            "})"
+        ],
+        "description": "Update item in SharePoint List"
+    }
+}

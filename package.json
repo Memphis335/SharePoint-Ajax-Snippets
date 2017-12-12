@@ -1,0 +1,22 @@
+{
+    "name": "ajax-snippets",
+    "displayName": "SharePoint Snippets",
+    "description": "Simple extension that provide ajax snippets for use in SharePoint with the REST API",
+    "version": "1.2.0",
+    "publisher": "Memphis335",
+    "engines": {
+        "vscode": "^1.12.0"
+    },
+    "icon": "images/commuShareIcon.png",
+    "categories": [
+        "Snippets"
+    ],
+    "contributes": {
+        "snippets": [
+            {
+                "language": "javascript",
+                "path": "./snippets/snippets.json"
+            }
+        ]
+    }
+}

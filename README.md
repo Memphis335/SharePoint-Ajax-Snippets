@@ -12,19 +12,19 @@ This extension provide snippets for the following :
 
     1. Update list item
 
-   ![Update](images/update.png)
+   ![Update](images/update.PNG)
 
     2. Create list item
 
-   ![POST](images/post.png)
+   ![POST](images/post.PNG)
 
     3. Delete list item
 
-   ![DELETE](images/delete.png)
+   ![DELETE](images/delete.PNG)
 
     4. Get list item/s
 
-   ![GET](images/get.png)
+   ![GET](images/get.PNG)
 
 
 > Note: basic knowledge of the REST API is needed.
